@@ -1,13 +1,20 @@
 package com.priscilla.compose.utils
 
+import com.priscilla.compose.R
 import com.priscilla.compose.bean.UrlData
 
 /**
  * Created by Priscilla Cheung on 2021年12月10日15:07:26
+ * 用于数据的维护
  */
 object DataManager {
+    private var tabTitleList:List<String> = listOf("书籍","收藏","其他")
+    private var tabResList:List<Int> = listOf(R.drawable.ic_book,R.drawable.ic_enshine,R.drawable.ic_custom)
+    fun getTabTitleList():List<String> = tabTitleList
+    fun getTabResList():List<Int> = tabResList
     private var titleList: ArrayList<UrlData> = ArrayList()
     fun createData() {
+
         if (Store.getAll<URLGroupData>().isEmpty())
             Store.put<URLGroupData>(
                 listOf(
