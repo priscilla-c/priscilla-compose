@@ -1,6 +1,7 @@
 package com.priscilla.compose.utils
 
 import android.content.Context
+import com.priscilla.compose.bean.MyObjectBox
 import io.objectbox.BoxStore
 
 object ObjectBox {

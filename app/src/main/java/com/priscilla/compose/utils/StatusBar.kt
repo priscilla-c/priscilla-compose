@@ -1,4 +1,4 @@
-package com.app.priscilla.utils
+package com.priscilla.compose.utils
 import android.app.Fragment
 import android.content.Context
 import android.graphics.Color

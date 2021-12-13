@@ -1,4 +1,4 @@
-package com.priscilla.compose.utils
+package com.priscilla.compose.bean
 
 import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id

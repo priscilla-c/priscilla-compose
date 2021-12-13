@@ -13,10 +13,9 @@ import com.priscilla.compose.utils.DataManager
  */
 //Toolbar
 @Composable
-fun toolbar(selectPosition:Int){
-    val titleList = DataManager.getTabTitleList()
+fun toolbar(title:String){
     Text(
-        text = titleList[selectPosition],
+        text = title,
         modifier = Modifier.fillMaxWidth(),
         textAlign = TextAlign.Center,
         fontSize = 20.sp,

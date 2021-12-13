@@ -10,13 +10,13 @@ import com.priscilla.compose.utils.DataManager
  * info：Application
  */
 class MyApp : Application() {
-    //401 未登录 200 已登录
     override fun onCreate() {
         super.onCreate()
         myApp = this
         myApp?.let {
             ObjectBox.init(this)
             DataManager.createData()
+
         }
     }
 

@@ -1,6 +1,5 @@
 package com.priscilla.compose.ui.view
 
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,9 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.priscilla.compose.MainViewModel
-import com.priscilla.compose.R
 import com.priscilla.compose.ui.theme.Gray
 import com.priscilla.compose.ui.theme.Purple500
 import com.priscilla.compose.utils.DataManager
