@@ -28,6 +28,7 @@ import com.priscilla.compose.ui.view.*
 import com.priscilla.compose.utils.DataManager
 import com.priscilla.compose.utils.Store
 import com.priscilla.compose.utils.Store.start
+import com.priscilla.compose.utils.hideSoftKeyboard
 import com.priscilla.compose.utils.statusBar
 import com.priscilla.compose.viewmodel.MainViewModel
 
@@ -93,7 +94,9 @@ class MainActivity : ComponentActivity() {
                 0->{
                     when (pageType) {
                         MAIN_PAGE -> {
-                            bodyView() {
+                            bodyView(inputEnter = {
+                                hideSoftKeyboard()
+                            }) {
                                 nowTitle = it
                                 pageType = BOOK_LIST_PAGE
                             }
@@ -125,7 +128,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun startWebView(it: String) {
-        val type = it.substring(it.length-3,it.length)
+        /*val type = it.substring(it.length-3,it.length)
         if (type.isNotBlank() && type == "pdf"){
             val cm: ClipboardManager =
                 getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -135,7 +138,8 @@ class MainActivity : ComponentActivity() {
         }else{
             nowURL = it
             pageType = WEB_PAGE
-        }
+        }*/
+        openBrowser(this,it)
     }
 
 
@@ -156,7 +160,7 @@ class MainActivity : ComponentActivity() {
                     super.onBackPressed()
                 } else {
                     mExitTime = System.currentTimeMillis()
-                    Toast.makeText(this, "再按一次推出程序", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show()
                 }
             }
             BOOK_LIST_PAGE -> {

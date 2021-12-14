@@ -44,7 +44,6 @@ import com.priscilla.compose.utils.Store
                         },
                     elevation = 8.dp,
                     shape = RoundedCornerShape(8.dp),
-
                     ) {
                     Row (verticalAlignment = Alignment.CenterVertically){
                         Icon(
